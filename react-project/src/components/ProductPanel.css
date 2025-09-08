@@ -1,0 +1,36 @@
+.product-info-container{
+    width: 350px;
+    height: 550px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+.image-container{
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    width: 350px;
+
+}
+.info-container{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.price-container{
+    text-align: center;
+    vertical-align: middle;
+}
+.info-text{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px;
+}
+.price-text{
+    font-size: 30px;
+    margin: 10px;
+
+}

@@ -1,0 +1,16 @@
+{
+    "tshirts":[
+        {
+            "id":0,
+            "name":"Jesus",
+            "image":"/images/tshirt-jesus.png",
+            "price":"130"
+        },
+        {
+            "id":1,
+            "name":"Angel",
+            "image":"/images/tshirt-angel.png",
+            "price":"130"
+        }
+    ]
+}
