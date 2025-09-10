@@ -2,8 +2,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./styles/ShirtPage.css"
 
+import React, { useContext } from 'react'
+import { OrderContext } from "../contexts/OrderContext";
+
+
+
 function ShirtPage(){
-    console.log(order)
+
+    const{order,addToOrder} = useContext(OrderContext)
     const params = useParams();
     const [shirt, setShirt] = useState(null)
     //Setting shirt
@@ -16,7 +22,6 @@ function ShirtPage(){
             data => {
                 data.forEach((item) => {
                     if (item.name === params.shirtName){
-                        console.log(item)
                         setShirt(item)
                     }
                 })
@@ -37,9 +42,19 @@ function ShirtPage(){
                 <div className="text-container">
                     <p className="text-name">{shirt.name}</p>
                    
-                    <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</text>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>    
                 
+                <button onClick={() => {
+                    addToOrder({  
+                        "id":shirt.id,
+                        "name":shirt.name,
+                        "image":shirt.image,
+                        "price":shirt.price,
+                        "quantity":1,
+                    });
+                }
+            }> Add to your order</button>
                  <div className="scroll-container">
                         <ul aria-hidden="true">
                             <li>
