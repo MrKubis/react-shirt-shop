@@ -12,6 +12,9 @@ import ProfilePage from './pages/ProfilePage.jsx';
 import NavBar from './Navbar.jsx';
 import ShirtsPage from './pages/ShirtsPage.jsx';
 import ShirtPage from './pages/ShirtPage.jsx';
+
+import { OrderContextProvider,OrderContext } from './contexts/OrderContext.jsx';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -55,14 +58,15 @@ const router = createBrowserRouter([
         },
     ]
   },
-
 ]
 );
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}>
-    </RouterProvider>
+    <OrderContextProvider>
+      <RouterProvider router={router}>
+      </RouterProvider>
+    </OrderContextProvider>
   </StrictMode>,
 )
