@@ -24,7 +24,6 @@ function ShirtsPage(){
             <h1>Shirts Page</h1>
             <div className="product-panels-container">
                {tshirts && tshirts.map((tshirt)=>{
-                    console.log(tshirt);
                     return(
                         <NavLink key = {tshirt.name} to={`/shirts/${tshirt.name}`}>
                             <ProductPanel image={tshirt.image} name={tshirt.name + " T-shirt"} price={tshirt.price} key = {tshirt.name} object = {tshirt}/>

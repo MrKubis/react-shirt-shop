@@ -1,7 +1,6 @@
 import "./ProductPanel.css"
 
 function ProductPanel(props){
-    console.log(props)
     return(
         <div className="product-info-container">
                 <img src={props.image} width = "350px" ></img>
