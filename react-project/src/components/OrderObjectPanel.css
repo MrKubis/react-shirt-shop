@@ -1,0 +1,35 @@
+.object-container{
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+
+.object-image-container{
+    width: 100px;
+    margin-right: 40px;
+    
+}
+.object-image-container img{
+    width: 100px
+}
+.object-info-container{
+    display: flex;
+    flex-direction: column;
+}
+.object-info-container ul{
+    padding-left: 0px;
+    list-style: none;
+}
+.object-info-container p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.object-quantity-container select{
+    height: 30px;
+    font-size: larger;
+    font-weight: 500;
+    border-radius: 0;
+    border: 0;
+    text-align: center;
+}
