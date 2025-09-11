@@ -44,17 +44,27 @@ function ShirtPage(){
                    
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>    
-                
-                <button onClick={() => {
-                    addToOrder({  
-                        "id":shirt.id,
-                        "name":shirt.name,
-                        "image":shirt.image,
-                        "price":shirt.price,
-                        "quantity":1,
-                    });
-                }
-            }> Add to your order</button>
+                <div className="order-container">
+                    <select className="select-size">
+                        <option value="" disabled selected>Select size</option>
+                        <option value="S" >S</option>
+                        <option value="M" >M</option>
+                        <option value="L" >L</option>
+                        <option value="XL">XL</option>
+
+                    </select>
+                    <button className="order-button" onClick={() => {
+                        addToOrder({  
+                            "id":shirt.id,
+                            "name":shirt.name,
+                            "image":shirt.image,
+                            "price":shirt.price,
+                            "quantity":1,
+                        });
+                    }
+                }> Add to your order</button>
+                </div>
+
                  <div className="scroll-container">
                         <ul aria-hidden="true">
                             <li>
