@@ -3,6 +3,7 @@ import "./styles/OrderPage.css"
 import { useContext, useState } from "react";
 import { OrderContext } from "../contexts/OrderContext.jsx";
 import OrderObjectPanel from "../components/OrderObjectPanel.jsx";
+import InfiniteScroller from "../components/InfiniteScroller.jsx";
 
 function OrderPage(){
     const {order, clearOrder, removeItem, setItemQuantity} = useContext(OrderContext)
@@ -14,17 +15,16 @@ function OrderPage(){
 
     return(
         <div>
-           
-            <h1>Your order:</h1>
+            <img className="img-et" src="/images/et.png"></img>
+            <InfiniteScroller text = "YOUR ORDER" />
              <ul>
                 {
                 order.map((item,index) => {
                     return(
-                        <div className="object-list-container" >
+                        <div className="object-container" >
                             <OrderObjectPanel object = {item} key={item.id} index = {index}/>
 
-                            <div className="object-quantity-container">
-                                <select defaultValue={item.quantity} onChange={(event) => {
+                                <select className="select-quantity" defaultValue={item.quantity} onChange={(event) => {
                                     setItemQuantity(index, parseInt(event.target.value));
                                     console.log(order)
                                     }}>
@@ -34,7 +34,6 @@ function OrderPage(){
                                         </option>
                                         ))}
                                     </select>
-                            </div>
                             <button className="remove-button" onClick={() => {
                                 removeItem(index)}
                             }>Remove</button>

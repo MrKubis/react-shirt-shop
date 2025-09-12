@@ -11,6 +11,12 @@
             "name":"Angel",
             "image":"/images/tshirt-angel.png",
             "price":"130"
+        },
+        {
+            "id":2,
+            "name":"Black hole",
+            "image":"/images/tshirt-blackhole.png",
+            "price":"130"
         }
     ]
 }

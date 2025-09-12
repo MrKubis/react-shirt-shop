@@ -3,7 +3,7 @@ import ProductPanel from "../components/ProductPanel";
 import "./styles/ShirtsPage.css"
 import { useEffect } from "react";
 import { useState } from "react";
-
+import InfiniteScroller from "../components/InfiniteScroller.jsx"
 
 function ShirtsPage(){
     const [tshirts, setTshirts] = useState(null);
@@ -21,9 +21,9 @@ function ShirtsPage(){
         )
     },[])
     return(
-        <>
-            <h1>Shirts Page</h1>
+
             <div className="product-panels-container">
+                <InfiniteScroller text="SHIRTS"></InfiniteScroller>
                {tshirts && tshirts.map((tshirt)=>{
                     return(
                         <NavLink key = {tshirt.name} to={`/shirts/${tshirt.name}`}>
@@ -36,7 +36,7 @@ function ShirtsPage(){
                                                     
                 
             </div>
-        </>
+
     );
 }
 export default ShirtsPage;

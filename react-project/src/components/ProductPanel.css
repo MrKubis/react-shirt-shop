@@ -6,6 +6,8 @@
     text-align: center;
     align-items: center;
     margin: 20px;
+    text-decoration:double;
+
 }
 .image-container{
     vertical-align: middle;
@@ -15,10 +17,16 @@
 
 }
 .info-container{
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center;
-    vertical-align: middle;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration:none;
+    color: black;
+}
+.info-container p{
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration:none;
+    color: black;
 }
 .price-container{
     text-align: center;
