@@ -6,7 +6,7 @@ function ProductPanel(props){
                 <img src={props.image} width = "350px" ></img>
             <div className="info-container">
                 <p className="info-text">{props.name}</p>   
-                <p className="price-text">{props.price}</p>
+                <p className="price-text">{props.price}zł</p>
             </div>
         </div>
     );

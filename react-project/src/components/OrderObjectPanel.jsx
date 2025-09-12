@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { OrderContext } from "../contexts/OrderContext.jsx";
 
 function OrderObjectPanel(props){
-
     const {setItemQuantity, removeItem} = useContext(OrderContext)
     return(
     <div className="object-container">
@@ -20,13 +19,12 @@ function OrderObjectPanel(props){
                     <p>{props.object.price}</p>
                 </li>
                 <li>
-                    <p>Size: M</p>
+                    <p>Size: {props.object.size}</p>
                 </li>
             </ul>
         </div>
         <div className="object-quantity-container" onChange={(event) => {
         setItemQuantity(props.index, parseInt(event.target.value))
-        console.log(props.object)
         }}>
         </div>
     </div>);
