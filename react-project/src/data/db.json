@@ -1,4 +1,6 @@
 {
+    "logo":"/images/logo.png",
+
     "tshirts":[
         {
             "id":0,
@@ -16,6 +18,24 @@
             "id":2,
             "name":"Black hole",
             "image":"/images/tshirt-blackhole.png",
+            "price":"130"
+        },
+        {
+            "id":3,
+            "name":"MEEPS",
+            "image":"/images/tshirt-meeps.png",
+            "price":"130"
+        },
+        {
+            "id":4,
+            "name":"Human",
+            "image":"/images/tshirt-human-white.png",
+            "price":"130"
+        },
+        {
+            "id":5,
+            "name":"Human",
+            "image":"/images/tshirt-human-black.png",
             "price":"130"
         }
     ]

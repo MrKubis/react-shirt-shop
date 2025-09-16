@@ -14,7 +14,7 @@ function OrderPage(){
     });
 
     return(
-        <div>
+        <div className>
             <img className="img-et" src="/images/et.png"></img>
             <InfiniteScroller text = "YOUR ORDER" />
              <ul>
@@ -43,7 +43,8 @@ function OrderPage(){
                        
                 })}
             </ul>
-            <p>Total:{total}</p>
+            {order.length >0 && <hr></hr>}
+            <p className="text-total">{order.length >0 ? `Total:${total +12}zł`: `Nothing ordered yet...`}</p>
         </div>
     );
 }

@@ -40,3 +40,12 @@
     
     background-color: hsl(0, 0%, 77%);
 }
+
+.text-total{
+
+    font-size: x-large;
+}
+
+.page-container hr{
+    border:1px
+}

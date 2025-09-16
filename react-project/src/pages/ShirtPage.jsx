@@ -62,16 +62,19 @@ function ShirtPage(){
                     </select>
                     <button className="order-button" onClick={() => {
                         if(size !== null){
-                        addToOrder({  
-                            "id":shirt.id,
-                            "name":shirt.name,
-                            "image":shirt.image,
-                            "price":shirt.price,
-                            "quantity":1,
-                            "size":size,
-                        });
-                        toast.success("Product has been added!")
-                            }
+                            addToOrder({  
+                                "id":shirt.id,
+                                "name":shirt.name,
+                                "image":shirt.image,
+                                "price":shirt.price,
+                                "quantity":1,
+                                "size":size,
+                            });
+                            toast.success("Product has been added!")
+                                }
+                        else{
+                            toast.error("Choose size")
+                        }
                     }
                 }> Add to your order</button>
                 

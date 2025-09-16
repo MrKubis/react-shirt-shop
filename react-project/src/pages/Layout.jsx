@@ -17,10 +17,8 @@ function Layout(){
             animate={{opacity:1}}
             style={{opacity:0}}
             transition={{duration:0.2}}
-            >
-                
+            >            
                 <Outlet/>
-
             </motion.div>
             </AnimatePresence>
                 <ToastContainer
