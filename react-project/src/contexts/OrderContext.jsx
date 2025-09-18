@@ -50,7 +50,9 @@ export function OrderContextProvider({children}){
     };
     return(
         <OrderContext.Provider value = {{order,setOrder,addToOrder,removeItem,getOrder,clearOrder,setItemQuantity}}>
+            
             {children}
+            
         </OrderContext.Provider>
     );
 }

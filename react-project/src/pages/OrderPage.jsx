@@ -1,13 +1,21 @@
 import "./styles/OrderPage.css"
 
-import { useContext, useState } from "react";
+import { use, useContext, useState } from "react";
 import { OrderContext } from "../contexts/OrderContext.jsx";
 import OrderObjectPanel from "../components/OrderObjectPanel.jsx";
 import InfiniteScroller from "../components/InfiniteScroller.jsx";
+import OrderModal from "../components/OrderModal.jsx";
 
 function OrderPage(){
+
+    function toggleModal(){
+        setModal(!modal);
+    }
+
     const {order, clearOrder, removeItem, setItemQuantity} = useContext(OrderContext)
     let total = 0
+
+    const [modal, setModal] = useState(false);
 
     order.forEach(item => {
         total += item.quantity * item.price;
@@ -34,7 +42,7 @@ function OrderPage(){
                                         </option>
                                         ))}
                                     </select>
-                            <button className="remove-button" onClick={() => {
+                            <button className="standard-button" onClick={() => {
                                 removeItem(index)}
                             }>Remove</button>
                         </div>
@@ -45,6 +53,13 @@ function OrderPage(){
             </ul>
             {order.length >0 && <hr></hr>}
             <p className="text-total">{order.length >0 ? `Total:${total +12}zł`: `Nothing ordered yet...`}</p>
+            <button className="standard-button"
+            onClick={toggleModal}
+            >Order</button>
+            {
+            modal && <OrderModal toggleModal = {toggleModal}/>
+            }
+
         </div>
     );
 }

@@ -15,7 +15,6 @@ function ShirtPage(){
     const [shirt, setShirt] = useState(null)
     //Setting shirt
     useEffect(() => {
-
                 data.tshirts.forEach((item) => {
                     console.log(item);
                     if (item.name === params.shirtName){
