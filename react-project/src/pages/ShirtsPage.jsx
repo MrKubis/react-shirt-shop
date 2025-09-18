@@ -4,21 +4,14 @@ import "./styles/ShirtsPage.css"
 import { useEffect } from "react";
 import { useState } from "react";
 import InfiniteScroller from "../components/InfiniteScroller.jsx"
+import * as data from "../data/db.json"
 
 function ShirtsPage(){
     const [tshirts, setTshirts] = useState(null);
 
+    
     useEffect(() =>{
-        fetch("http://localhost:8000/tshirts")
-        .then(res=>{
-            return res.json();
-        })
-        .then(
-            data =>{
-
-                setTshirts(data)
-            }
-        )
+        setTshirts(data.tshirts)
     },[])
     return(
 

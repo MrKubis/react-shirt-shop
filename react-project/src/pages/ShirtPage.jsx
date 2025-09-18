@@ -6,7 +6,7 @@ import React, { useContext } from 'react'
 import { OrderContext } from "../contexts/OrderContext";
 import { toast } from "react-toastify";
 import InfiniteScroller from "../components/InfiniteScroller.jsx"
-
+import * as data from "../data/db.json"
 import { motion } from "framer-motion"
 function ShirtPage(){
     const [size, setSize] = useState(null)
@@ -15,20 +15,15 @@ function ShirtPage(){
     const [shirt, setShirt] = useState(null)
     //Setting shirt
     useEffect(() => {
-        fetch("http://localhost:8000/tshirts")
-        .then(res => {
-            return res.json()
-        })
-        .then(
-            data => {
-                data.forEach((item) => {
+
+                data.tshirts.forEach((item) => {
+                    console.log(item);
                     if (item.name === params.shirtName){
                         setShirt(item)
                     }
                 })
             }
-        )
-    },[])
+    ,[])
     if(shirt)
         //I deffinetely need to fix this one
     return(
