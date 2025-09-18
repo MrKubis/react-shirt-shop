@@ -1,9 +1,5 @@
 import { useForm } from 'react-hook-form'
 
-type FormFields = {
-    name:string;
-    email:string;
-}
 import "./OrderModal.css"
 export default function OrderModal({toggleModal}){
     const form = useForm();

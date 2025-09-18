@@ -4,7 +4,6 @@ import { use, useContext, useState } from "react";
 import { OrderContext } from "../contexts/OrderContext.jsx";
 import OrderObjectPanel from "../components/OrderObjectPanel.jsx";
 import InfiniteScroller from "../components/InfiniteScroller.jsx";
-import OrderModal from "../components/OrderModal.jsx";
 
 function OrderPage(){
 
@@ -57,7 +56,7 @@ function OrderPage(){
             onClick={toggleModal}
             >Order</button>
             {
-            modal && <OrderModal toggleModal = {toggleModal}/>
+            //modal && <OrderModal toggleModal = {toggleModal}/>
             }
 
         </div>
