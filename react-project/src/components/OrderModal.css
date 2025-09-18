@@ -1,0 +1,33 @@
+.modal{
+    z-index: 1000;
+}
+
+.modal, .overlay{
+    width: 100vw;
+    height: 100vw;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+.overlay{
+    background-color: rgba(41, 41, 41, 0.342);
+}
+
+.modal-content{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    padding: 15px 30px;
+    min-width: 500px;
+}
+
+.modal-content-button{
+    position: absolute;
+    top:10px;
+    right:10px;
+}
